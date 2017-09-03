@@ -4,29 +4,21 @@ import java.util.List;
 
 public class Comanda {
 	
-	private int numero;
-	private List<Marcacao> marcacoes;
+	private long idComanda;
+	private int statusUtilizada;//retorna true quando utilizada em algum terminal de atendimento
 	
-
-	public int getNumber() {
-		return numero;
-	}
-	public void setNumber(int numero) {
-		this.numero = numero;
-	}
-	public List<Marcacao> getMarcacoes() {
-		return marcacoes;
-	}
-	public void setMarcacoes(List<Marcacao> marcacoes) {
-		this.marcacoes = marcacoes;
-	}
 	
-	public void addMarcacao(Marcacao marcacao) {
-		marcacoes.add(marcacao);
+	public long getIdComanda() {
+		return idComanda;
 	}
-	
-	public void removeMarcacao(Marcacao marcacao) {
-		marcacoes.remove(marcacao.getNumeroMarcacao());
+	public void setIdComanda(long idComanda) {
+		this.idComanda = idComanda;
+	}
+	public int isStatusUtilizada() {
+		return statusUtilizada;
+	}
+	public void setStatusUtilizada(int statusUtilizada) {
+		this.statusUtilizada = statusUtilizada;
 	}
 	
 

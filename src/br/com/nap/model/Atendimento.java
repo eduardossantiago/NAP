@@ -2,14 +2,17 @@ package br.com.nap.model;
 
 import java.sql.Date;
 
-public class Marcacao {
+public class Atendimento {
 	
 	long idMarcacao;
 	int numeroMarcacao;
-	Usuario usuarioMarcacao;
+	Usuario usuarioAtendimento;
 	Date dataMarcacao;
 	Produto produto;
 	double qtdProduto;
+	double vlTotal = qtdProduto * produto.getPrecoProduto();
+	
+	
 	public long getIdMarcacao() {
 		return idMarcacao;
 	}
@@ -17,10 +20,10 @@ public class Marcacao {
 		this.idMarcacao = idMarcacao;
 	}
 	public Usuario getUsuarioMarcacao() {
-		return usuarioMarcacao;
+		return usuarioAtendimento;
 	}
 	public void setUsuarioMarcacao(Usuario usuarioMarcacao) {
-		this.usuarioMarcacao = usuarioMarcacao;
+		this.usuarioAtendimento = usuarioMarcacao;
 	}
 	public Date getDataMarcacao() {
 		return dataMarcacao;
@@ -47,6 +50,9 @@ public class Marcacao {
 		this.numeroMarcacao = numeroMarcacao;
 	}
 	
+	public double getVlTotal() {
+		return this.vlTotal;
+	}
 	
 	
 }
