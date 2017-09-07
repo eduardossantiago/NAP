@@ -14,5 +14,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring Jars Library"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JDBC Oracle Jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/IoC"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -9,6 +9,7 @@ public class Produto {
 	public Produto() {}
 
 	public long getIdProduto() {
+		
 		return idProduto;
 	}
 

@@ -5,14 +5,23 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.tomcat.jdbc.pool.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class ComandaDAO {
 	
 	Connection con;
 	
-	public ComandaDAO(Connection con) {
+	@Autowired
+	public ComandaDAO(DataSource dataSource) {
 		
-		this.con = con;
-		
+		try {
+			this.con = dataSource.getConnection();
+		}catch(SQLException e) {
+			throw new RuntimeException("Problema no dataSource(ComandaDAO)", e);
+		}
 	}
 	
 	public int verStatus(Comanda comanda) {//ver se comanda está sendo utilizada ou não
